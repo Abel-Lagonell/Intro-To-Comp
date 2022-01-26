@@ -17,14 +17,24 @@ int main(int argc, char **argv){
     printf("Enter the first number and second number separated by a , (example 3,5) : "); 
     scanf("%d,%d", &a, &b); 
  
-    // Check if a is equal to b and then print the result 
-    if (a==b){ 
-        printf("a is equal to b"); 
+    // Check if a is greater than b and then print the result
+    if (a>b){ 
+        printf("a is greater than to b\n"); 
+    }
+    
+    // Check if a is less than b and then print the result
+    if (a<b){ 
+        printf("a is less than to b\n"); 
+    }
+
+    // Check if a is less than or equal to b and then print the result 
+    if (a<=b){ 
+        printf("a is less than or equal to b\n"); 
     } 
  
-    // Check if a is equal to b and then print the result 
-    if (a!=b){ 
-        printf("a is not equal to b"); 
+    // Check if a is greater than or equal to b and then print the result 
+    if (a>=b){ 
+        printf("a is greater than or equal to b\n"); 
     } 
 
     return 0; //Inform the operating system that the exit is successful.
