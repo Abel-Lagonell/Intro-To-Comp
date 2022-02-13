@@ -1,3 +1,10 @@
+/*******************************
+ * Name:            Abel Lagonell
+ * Programming Assignment 4 Task 3
+ * Date:            2/13/2022
+ * Description:     Compute the Least Common Multiple of the given integers
+ */
+
 #include <stdio.h>
 
 int main(void){

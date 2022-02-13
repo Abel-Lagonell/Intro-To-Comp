@@ -1,3 +1,10 @@
+/*******************************
+ * Name:            Abel Lagonell
+ * Programming Assignment 4 Task 2
+ * Date:            2/13/2022
+ * Description:     Compute the BMI of a person given weight and height
+ */
+
 #include <stdio.h>
 
 int main(void){
