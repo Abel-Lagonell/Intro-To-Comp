@@ -21,26 +21,26 @@ int main(void){
     if ((n1<0)||(n2<0)){
         puts("Please enter Positive numbers next time.");
     }else if (n1<n2){
-        for (d = 2; d < n1; d++){
+        for (d = n1; d > 2; d--){
             if( (n1%d==0) && (n2%d==0) ){
                 printf("The Greatest Common Divisor is %d", d);
-                continue;
-            }
-        }
-        if (n1%d != 0){
-            puts("There is no Greatest Common Divisor");
-        }
-    }else{
-        for (d = 2; d < n2; d++){
-            if( (n1%d==0) && (n2%d==0) ){
-                printf("The Greatest Common Divisor is %d", d);
-                continue;
+                break;
             }
         }
         if (n2%d != 0){
+            puts("There is no Greatest Common Divisor");
+        }
+    }else{
+        for (d = n2; d > 2; d--){
+            if( (n1%d==0) && (n2%d==0) ){
+                printf("The Greatest Common Divisor is %d", d);
+                break;
+            }
+        }
+        if (n1%d != 0){
         puts("There is no Greatest Common Divisor");
         }
     }
-
+    
     return 0; //Inform the operating system that the exit is successful.
 }

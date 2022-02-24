@@ -42,7 +42,7 @@ int main(void){
                     break;
             }
         }else{
-            puts("Not an English alphabet\n");
+            puts("Not an English alphabet");
         }  
     } while (letter != EOF);
 
