@@ -11,9 +11,7 @@ int main(void){
 
     char letter;
 
-    do{
-        puts("Please enter a letter");
-        letter = getchar();
+    while (letter != EOF && letter != '\n'){
         if ((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z')){
             switch (letter){
                 case 'a':
@@ -33,13 +31,12 @@ int main(void){
                 default:
                     printf("%c is a consonant letter\n",letter);
                     break;
-            }
-        }else if (letter == EOF){
-            continue;
+                }
         }else {
             puts("Not an English alphabet\n");
         }
-    } while (letter != EOF);
-
+        puts("Please enter a letter");
+        letter = getchar();
+    }
     return 0;
 }
