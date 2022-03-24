@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-void print_rectangle(int width, int height);
+void print_rectangle(int width, int height);//Prototype of the function
 
 void main(void){
     int width, height;
@@ -16,10 +16,13 @@ void main(void){
     print_rectangle(width, height);
 }
 
+//Function to draw a Rectangle with given width and height
 void print_rectangle(int width, int height){
+    //Print the top of the rectangle
     for (int i = 0; i < width; i++){
         printf("*");
     }
+    //Print the sides of the rectangle
     for (int i = 2; i < height; i++){
         printf("\n");
         printf("*");
@@ -28,6 +31,7 @@ void print_rectangle(int width, int height){
         }
         printf("*");
     }
+    //Print the bottom of the rectangle
     printf("\n");
     for (int i = 0; i < width; i++){
         printf("*");

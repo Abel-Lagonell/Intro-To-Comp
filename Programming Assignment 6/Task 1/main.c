@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-void print_hello();
+void print_hello(); //Prototype of Function
 
 int main (void){
     print_hello();
@@ -17,6 +17,7 @@ int main (void){
     return 0;
 }
 
+//Function that prints hello
 void print_hello(){
     puts("Hello");
 }
