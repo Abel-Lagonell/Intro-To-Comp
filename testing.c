@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include <math.h>
 
-int fun(int n);
+int gcd(int A, int B);
 
 int main(){
-  int x;
-  puts("put x:");
-  scanf("%d", &x);
-  printf("%d\n", fun(x));
-  return 0;
+  int x,y;
+
+  puts("Put in A:");
+  scanf("%d",&x);
+  puts("Put in B:");
+  scanf("%d",&x);
 }
 
-int fun(int n){
-  int sum = 1;
-  for(int i=1; i<=n; i++){
-    sum *= i;
+int gcd(int A, int B){
+  if(A<B){
+    int C = A;
+    A = B;
+    B = C;
   }
-  return sum;
+  if(A%B) return B; //GCD is B
+  else gcd(B, A/B);
 }
