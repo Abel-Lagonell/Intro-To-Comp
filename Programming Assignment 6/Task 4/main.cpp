@@ -24,4 +24,4 @@ int is_perfect_square(int x){
     y = sqrt(y);
     if(y==x) return 1;
     else return 0;
-}                                                                                                                                  
+}
