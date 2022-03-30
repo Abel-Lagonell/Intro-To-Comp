@@ -2,7 +2,7 @@
  * Name:            Abel Lagonell
  * Programming Assignment 7 Task 2
  * Date:            3/17/2022
- * Description:     Print various values of the variable i.
+ * Description:     Print Sig Figs in order of importance
 */
 
 #include <stdio.h>
