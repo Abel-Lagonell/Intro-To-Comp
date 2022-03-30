@@ -10,20 +10,23 @@
 int print_digits(int number);
 
 int main(void){
-    int num = 24746;
-    print_digits(num);
+    int x;
+    puts("Enter a number: ");
+    scanf("%d",&x);
+    print_digits(x);
+
 }
 
 int print_digits(int number){
+    int num;
+    
+    if (number > 10){
+        num = print_digits(number/10);
+        printf("%d\n", number%10);
+        return num;
+    }
     if(number < 10) {
+        printf("%d\n", number%10);
         return number;
     }
-    int num = print_digits(number/10);
-    if(number/10.0>1.0){
-        printf("%d\n", number);
-        printf("ran\n");
-    } else {
-        printf("%d\n", number/10%10);
-    }
-    return num;
 }
