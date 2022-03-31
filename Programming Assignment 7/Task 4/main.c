@@ -7,25 +7,30 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-enum value{Head, Tail};
+enum value {Head, Tail};
+
 static int tails, heads;
 
-int tally (int selection, value v);
-void toss();
+int tally (int selection, enum value v);
+int toss();
 
 int main(void){
-    for(int i=0; i < 10000 ; i++) toss();
-    printf("Heads: %d, Tails: %d\n", tally(1,'Head'), tally(1,'Tail'));
+    srand((unsigned) time(NULL)); 
+    for(int i=0; i < 10000 ; i++) {
+        tally(1, toss());
+    }
+    printf("Heads: %d, Tails: %d\n", tally(0,Head), tally(0,Tail));
 }
 
-int tally(int selection,value v){
+int tally(int selection,enum value v){
     if(selection==0){
         switch(v){
-            case 0:
+            case Head:
                 return heads;
                 break;
-            case 1:
+            case Tail:
                 return tails;
                 break;
             default:
@@ -34,11 +39,11 @@ int tally(int selection,value v){
     }
     if(selection!=0){
         switch(v){
-            case 0:
-                head ++;
+            case Head:
+                heads ++;
                 return -1;
                 break;
-            case 1:
+            case Tail:
                 tails ++;
                 return -1;
                 break;
@@ -48,6 +53,6 @@ int tally(int selection,value v){
     }
 }
 
-void toss(){
-    tally(1, rand()%2);
+int toss(){
+    return rand()%2;
 }
