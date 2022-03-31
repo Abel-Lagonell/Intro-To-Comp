@@ -19,12 +19,13 @@ int main(void){
 
 int print_digits(int number){
     int num;
-    
+    //Prints the most significant digit first
     if (number > 10){
         num = print_digits(number/10);
         printf("%d\n", number%10);
         return num;
     }
+    //default case
     if(number < 10) {
         printf("%d\n", number%10);
         return number;

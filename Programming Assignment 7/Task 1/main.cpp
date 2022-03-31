@@ -12,6 +12,7 @@ int main(void){
     printf("   x     sin(x)  cos(x)  tan(x)  exp(x)  log(x)\n");
     printf("------- ------- ------- ------- ------- -------\n");
     for(double i = -M_PI; i <= M_PI; i += M_PI/5){
+        // Print the values of the variable
         printf(" %5.2lf   %5.2lf   %5.2lf   %5.2lf   %5.2lf   %5.2lf\n", i, sin(i), cos(i), tan(i), exp(i), log(i));
     }
     return 0;
