@@ -12,7 +12,7 @@
 
 void makeArrayRand(int *a, size_t col);
 void sort(int *a, size_t col);
-void search(int *a, size_t col, int key);
+int search(int *a, size_t col, int key);
 void printArray(int *a, size_t col);
 
 int main(){
@@ -56,29 +56,28 @@ void sort(int *a, size_t col){
 }
 
 //Binary Search with range
-void search(int *a, size_t col, int key){
+int search(int *a, size_t col, int key){
     int min = 0;
     int max = col-1;
-    int mid=floor((max)/2);
-    while (a[mid] != key){
-        if (a[mid] > key){
-            max = mid;
+    int mid;
+    while (min <= max){
+        if (a[mid] == key){ 
+            int midHigh = mid;
+            while (a[midHigh] == key){
+                midHigh++;
+            }
+            printf("The Key is located between index %d:%d\n", mid, midHigh-1);
+            return 0;
         }
+        mid= min + (max-min)/2;
         if (a[mid] < key){
-            min = mid;
+            min = mid +1;
+        } else if (a[mid] > key){
+            max = mid -1;
         }
-        mid=floor((max+min)/2);
+        printf("%d:%d:%d\n", max, min,mid);
     }
     
-    int midLow = mid; 
-    int midHigh = mid;
-    while (a[midLow] == key){
-        midLow--;
-    }
-    while (a[midHigh] == key){
-        midHigh++;
-    }
-    midLow++;
-    midHigh--;
-    printf("The Key is located between index %d:%d", midLow, midHigh);
+    puts("There is not value for that key"); 
+    return -1;
 }
