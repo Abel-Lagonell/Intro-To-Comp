@@ -1,20 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include "array.h"
 
-int main(){
-  int a[100];
-  
-  srand(time(NULL));
-
-  make1DIntArrayRand(a, 100, 1999, 2022);
-  bubbleSort1DInt(a, 100);
-  print2DIntArray(a,5,20);
-
-  int key;
-  scanf("%d", &key);
-  bin1DIntSearch(a, 100, key);
+void alphabet(char a[], size_t size){
+  int alpha[26];
+  for (int i = 0; i < 26; i++) alpha[i] =0;
+  for (int i = 0; i < size; i ++){
+    for(int j = 0; j < 26; j++){
+      if(a[i] == 'a'+j || a[i] == 'A'+j){
+        alpha[j] = alpha[j]+1;
+      }
+    }
+  }
+  for (int i=0; i<26; i++){
+    printf("The count of %c is %d\n", 'a'+i, alpha[i]);
+  }
 }
 
 
+int main(){
+  char s[]="HenrySaysHelloWorld";
+  alphabet(s,19);
+
+}
