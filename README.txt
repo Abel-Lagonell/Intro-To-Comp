@@ -1,1 +1,0 @@
-To differentiate the programs I have seperated them into the different programs. When the programs were run they were named main.
