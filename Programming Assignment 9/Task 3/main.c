@@ -42,10 +42,8 @@ int main() {
       for (int j = i; j >= n; j--){
         //Prints the individual words
         if (a[j] == ' ' || j==0){
-          //Adds a space for the first word since there is no space before it.
-          if (j == 0 )
-            strcat(temp, " ");
           printString(a, j, m);
+          strcat(temp, " ");
           m=i-(i-j);
         }
       }
@@ -64,7 +62,7 @@ int main() {
 //Prints the string into the temp with no periods and no enter sign.
 void printString(char *a, int start, int end){
   for (int i=start; i<=end; i++){
-    if(a[i]!='.'&& a[i]!='\n')
+    if(a[i]!='.'&& a[i]!='\n' && a[i]!=' ')
       sprintf(temp, "%s%c", temp, a[i]);
   }
 }

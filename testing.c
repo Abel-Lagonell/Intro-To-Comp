@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-<<<<<<< HEAD
 void alphabet(char a[], size_t size){
   int alpha[26];
   for (int i = 0; i < 26; i++) alpha[i] =0;
@@ -38,7 +37,5 @@ int main(){
     c1++;
   }
   return 0;
-  
-}
 
->>>>>>> 5421710693420848429f0269985f09413d0a4a52
+}
