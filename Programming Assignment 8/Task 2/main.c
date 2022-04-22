@@ -126,6 +126,7 @@ double arrayMode(double *a, size_t col){
     int counter = 2;
     for (int i = 0; i < col; i++){
         if (a[i] == a[i+1]){
+            count++;
             b[count] = counter;
             counter++;
         } else{
